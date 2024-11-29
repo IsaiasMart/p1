@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <main>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practica 1</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            main {
+                display: grid;
+                grid-template-areas: "topbar" "content";
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            header {
+                grid-area: topbar;
+            }
+
+            article {
+                grid-area: content;
+            }
+
+            .encabezado {
+                text-align: center;
+                font-size: x-large;
+                background-color: rgb(138, 138, 121);
+                padding: 10px;
+            }
+
+            .barranav {
+                background-color: black;
+                display: flex;
+                padding: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-around;
+            }
+
+            .barranav a {
+                color: rgb(138, 138, 121);
+                text-decoration: none;
+            }
+
+            .galeria {
+                display: grid;
+                gap: 30px;
+                padding: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .galeria img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1 / 1;
+                border-radius: 3%;
+                object-fit: cover;
+                box-shadow: 8px 10px 20px #00000085;
+                filter: grayscale(.5);
+            }
+
+            .galeria img:hover {
+                transform: scale(1.1);
+                transition: transform 1500ms;
+                filter: grayscale(0);
+                box-shadow: 8px 10px 30px #000000dd;
+            }
+        </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="encabezado">
+                <p>Ejercicio navegador</p>
+            </div>
+            <nav class="barranav">
+                <a href="#1">Contacto</a>
+                <a href="rbdb">Agenda</a>
+                <a href="bdfg">Fotografo</a>
+                <a href="fdb">Destinos</a>
+            </nav>
+        </header>
+        <article >
+            <div class="galeria">
+                <img tabindex="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2aMi9Gvefjs1e2ZO_6udWnqkt5OKkv5776A&s">
+                <img tabindex="0" src="https://tattooschoolmadrid.es/wp-content/uploads/2022/12/blackwork-tattoo-popular.webp">
+                <img tabindex="0" src="https://tattooschoolmadrid.es/wp-content/uploads/2023/04/Ejemplo-ignorant-tattoo-300x300.webp">
+                <img tabindex="0" src="https://cdntattoofilter.com/tattoo/308081/l.jpg">
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
